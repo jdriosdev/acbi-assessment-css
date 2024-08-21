@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/c0c1ac414c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <link rel="icon" href="images/logo.png" />
+    <link rel="stylesheet" href="css/template.css" />
+    <link rel="stylesheet" href="css/hamburgerMenu.css" />
+    <link rel="stylesheet" href="css/iconBagMenu.css" />
+    <link rel="stylesheet" href="css/content.css" />
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
+    <title>Computer Force | Register</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="mobileMenuContainer">
+          <input type="checkbox" class="toggler" />
+          <div class="mobileButtonStyle hamburger perfectCenter">
+            <div></div>
+          </div>
+          <div class="modal mobileMenu">
+            <div class="search-container">
+              <form>
+                <input type="text" placeholder="Search" name="search" />
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+            <ul>
+              <li><a href="products.html">Products</a></li>
+            </ul>
+            <ul>
+              <li><a href="register.html">Register</a></li>
+            </ul>
+            <ul>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+          <!-- <div class="menu"> -->
+        </div>
+        <!-- <div class="mobileMenuContainer"> -->
+        <a href="index.html">
+          <p class="logo">Computer Force </p>
+        </a>
+
+        <div class="mobileMenuContainer">
+          <input type="checkbox" class="toggler" />
+          <div class="mobileButtonStyle iconBag perfectCenter"></div>
+          <div class="modal mobileMenu">
+            <table>
+              <h2 class="purchasesContainer">PURCHASES</h2>
+              <tr>
+                <th>ITEM</th>
+                <th>PRICE (AUD)</th>
+              </tr>
+              <tr>
+                <td>Test Item 1</td>
+                <td>$1,000</td>
+              </tr>
+              <tr>
+                <td>Test Item 2</td>
+                <td>$500</td>
+              </tr>
+              <tr class="total">
+                <th>TOTAL</th>
+                <th>$1,500</th>
+              </tr>
+            </table>
+
+            <input type="submit" name="checkout" value="Go to Checkout" />
+          </div>
+        </div>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+        </ul>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+        </ul>
+        <ul>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+        <ul>
+          <li><a href="about.html">About</a></li>
+        </ul>
+
+        <div class="searchDesktopContainer">
+          <form>
+            <input type="text" placeholder="Search..." name="search" />
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </nav>
+
+      <main>
+        <section>
+          <h1 class="pageTitle centerText">Registration Form</h1>
+          <p class="centerText">
+            Please complete the following form to register for an account on our
+            website.
+          </p>
+
+          <form
+            class="registrationForm"
+            name="registrationForm"
+            action="processes/processRegisterCustomer.html"
+            method="post"
+            onsubmit="return validateRegistrationForm()"
+          >
+            <div class="inputGroup">
+              <label for="username">Username<sup>*</sup>:</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+            <div class="inputGroup">
+              <label for="emailAddress">Email Address<sup>*</sup>:</label>
+              <input
+                type="email"
+                id="emailAddress"
+                name="emailAddress"
+                required
+              />
+            </div>
+            <div class="inputGroup">
+              <label for="password">Password<sup>*</sup>:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+            <div class="inputGroup">
+              <label for="confirmPassword">Confirm Password<sup>*</sup>:</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                required
+              />
+            </div>
+            <div class="inputGroup">
+              <label for="firstName">First Name<sup>*</sup>:</label>
+              <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div class="inputGroup">
+              <label for="surname">Surname<sup>*</sup>:</label>
+              <input type="text" id="surname" name="surname" required />
+            </div>
+            <div class="inputGroup">
+              <p>Gender<sup>*</sup>:</p>
+              <div class="radioGender">
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  required
+                /><label for="male">Male</label>
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="female"
+                  required
+                /><label for="female">Female</label>
+              </div>
+            </div>
+            <div class="inputGroup">
+              <label for="dateOfBirth">Date of Birth</label>
+              <input type="date" id="dateOfBirth" name="dateOfBirth" />
+            </div>
+            <div class="inputGroup">
+              <label for="address">Address<sup>*</sup>:</label>
+              <input type="text" id="address" name="address" required />
+            </div>
+            <div class="inputGroup">
+              <label for="suburb">Suburb<sup>*</sup>:</label>
+              <input type="text" id="suburb" name="suburb" required />
+            </div>
+            <div class="inputGroup">
+              <label for="postCode">Post Code<sup>*</sup>:</label>
+              <input type="text" id="postCode" name="postCode" required />
+            </div>
+            <div class="inputGroup">
+              <label for="state">State<sup>*</sup>:</label>
+              <select type="select" id="state" name="state" required>
+                <option value="australia">ACT</option>
+                <option value="japan">NSW</option>
+                <option value="brazil">NT</option>
+                <option value="brazil">QLD</option>
+                <option value="brazil">SA</option>
+                <option value="brazil">TAS</option>
+                <option value="brazil">VIC</option>
+                <option value="brazil">WA</option>
+              </select>
+            </div>
+            <div class="inputGroup">
+              <label for="postCode">Phone Number<sup>*</sup>:</label>
+              <input type="text" id="phoneNumber" name="phoneNumber" required />
+            </div>
+
+            <input
+              type="button"
+              value="Clear"
+              onclick="clearRegistrationForm()"
+            />
+            <input type="submit" name="register" value="Register" />
+          </form>
+        </section>
+
+        <aside>
+          <h2 class="purchasesContainer">PURCHASES</h2>
+          <table>
+            <tr>
+              <th>ITEM</th>
+              <th>PRICE (AUD)</th>
+            </tr>
+            <tr>
+              <td>Test Item 1</td>
+              <td>$1,000</td>
+            </tr>
+            <tr>
+              <td>Test Item 2</td>
+              <td>$500</td>
+            </tr>
+            <tr class="total">
+              <th>TOTAL</th>
+              <th>$1,500</th>
+            </tr>
+          </table>
+          <input type="submit" name="checkout" value="Go to Checkout" />
+        </aside>
+      </main>
+    </div>
+    <!-- <div class="container"> -->
+
+    <footer>
+      <p>20xx &copy; Student Name | All rights reserved</p>
+      <p><a href="index.html" target="_blank">Privacy Policy</a></p>
+    </footer>
+  </body>
+</html>

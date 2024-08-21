@@ -1,0 +1,294 @@
+:root {
+  --cfBlack: #000;
+  --cfGrey: #888; /*For copyright text*/
+  --cfGreen: #c7ffd8;
+  --cfLightBlue: #e4fbff;
+  --cfLightGrey: #eeeeeec0;
+  --cfRed: #1e201e;
+  --cfPink: #697565;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial;
+}
+
+header {
+  background-color: var(--cfGrey);
+  opacity: 0.95;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vh 1vw;
+  position: fixed;
+  z-index: 1;
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  height: 90%;
+  position: relative;
+}
+
+footer {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  font-size: small;
+  width: 100vw;
+  padding: 12px;
+  text-align: center;
+  background-color: var(--cfGrey);
+}
+
+main {
+  display: flex;
+  top: 10vh;
+  width: 100vw;
+  min-height: 120vh;
+  position: relative;
+  background-color: var(--cfPink);
+}
+
+nav {
+  background-color: var(--cfRed);
+  height: 5vh;
+  width: 100vw;
+  padding: 1vh 1vw;
+  display: none;
+  position: fixed;
+  top: 10vh;
+  z-index: 1;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+nav > ul > li {
+  display: inline;
+  margin-right: 5vw;
+}
+
+nav > ul > li > a {
+  color: var(--cfLightGrey);
+  text-decoration: solid;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+section {
+  background-color: var(--cfLightGrey);
+  width: 100%;
+  padding: 2vh 2vw 5vh;
+}
+
+div.desc > ul > li {
+  margin: auto;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+#logo {
+  height: 12vh;
+  width: auto;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.mobileButtonStyle {
+  background-color: var(--cfRed);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.mobileIconBag {
+  background-color: var(--cfRed);
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.modal {
+  position: fixed;
+  padding-top: 10vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0; /*Start at 0, then transition to 0.9 opacity*/
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.perfectCenter {
+  align-items: center;
+  justify-content: center;
+}
+
+table,
+h2 {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vh;
+}
+
+tr,
+th,
+td {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1vh;
+  text-align: center;
+}
+
+.purchasesContainer {
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+}
+
+.toggler {
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+}
+
+.total {
+  font-weight: bold;
+}
+
+input[value="Go to Checkout"] {
+  color: var(--cfLightGrey);
+  background-color: var(--cfRed);
+  border-radius: 8px;
+  font-size: 20px;
+  width: 60%;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+aside {
+  display: none;
+}
+
+/* FOR TABLET AND DESKTOP MONITORS*/
+/* @media(min-width: 600px) and (min-height: 441px){ */
+@media (min-width: 600px) {
+  header {
+    justify-content: center;
+    background-color: var(--cfGrey);
+    opacity: 0.95;
+    height: 10vh;
+  }
+
+  nav {
+    display: flex;
+    top: 10vh;
+  }
+
+  aside {
+    background-color: #9e9d9d;
+    padding-top: 10vh;
+    display: block;
+    width: 20vw;
+    height: auto;
+  }
+
+  main {
+    padding-top: 2%;
+    min-height: 100vh;
+    background-color: var(--cfPink);
+  }
+
+  section {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 80vw;
+  }
+
+  footer {
+    position: relative;
+    opacity: 0.95;
+    font-size: medium;
+    background-color: var(--cfGrey);
+  }
+
+  aside > input[value="Go to Checkout"] {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+
+  div.searchDesktopContainer {
+    margin-left: auto;
+    margin-bottom: 7px;
+  }
+
+  .searchDesktopContainer button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    background: var(--cfLightGrey);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+  input[type="text"] {
+    font-size: 17px;
+  }
+
+  .mobileMenuContainer {
+    display: none;
+  }
+} /* FOR DESKTOP MONITORS*/
