@@ -21,15 +21,20 @@
     <div class="container">
       <header>
         <div class="mobileMenuContainer">
-          <input type="checkbox" class="toggler" />
+          <label for="checkbox-1">
+  
+          </label>
+          <input id="checkbox-1" type="checkbox" class="toggler" aria-label="toggle" />
           <div class="mobileButtonStyle hamburger perfectCenter">
             <div></div>
           </div>
           <div class="modal mobileMenu">
             <div class="search-container">
               <form>
-                <input type="text" placeholder="Search" name="search" />
-                <button type="submit"><i class="fa fa-search"></i></button>
+                <input type="search" placeholder="Search" name="search" aria-label="search"/>
+                <button type="submit">
+                  <em class="fa fa-search"></em>
+                </button>
               </form>
             </div>
             <ul>
@@ -49,14 +54,14 @@
           </a>
         </div>
         <div class="mobileMenuContainer">
-          <input type="checkbox" class="toggler" />
+          <input type="checkbox" class="toggler" aria-label="checkbox" />
           <div class="mobileButtonStyle iconBag perfectCenter"></div>
           <div class="modal mobileMenu">
             <table>
               <h2 class="purchasesContainer">PURCHASES</h2>
               <tr>
-                <th>ITEM</th>
-                <th>PRICE (AUD)</th>
+                <th id="item">ITEM</th>
+                <th id="price">PRICE (AUD)</th>
               </tr>
               <tr>
                 <td>Test Item 1</td>
@@ -90,15 +95,17 @@
         </ul>
         <div class="searchDesktopContainer">
           <form>
-            <input type="text" placeholder="Search..." name="search" />
-            <button type="submit"><i class="fa fa-search"></i></button>
+            <input aria-label="search" type="search" placeholder="Search..." name="search" />
+            <button type="submit">
+              <em class="fa fa-search"></em>
+            </button>
           </form>
         </div>
       </nav>
 
       <main>
         <section>
-          <h1 class="pageTitle centerText">About Computer Force</h1>
+          <h2 class="pageTitle centerText">About Computer Force</h2>
           <p class="centerText">
             Computer Force is a brand-new start-up company designed to provide
             first-class service to its customers. Based in Parramatta in Sydney.
